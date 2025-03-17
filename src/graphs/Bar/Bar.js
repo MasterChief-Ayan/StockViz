@@ -1,13 +1,12 @@
 import * as d3 from 'd3';
 
 export const BarProducer = (data, asset, timespan, theme) => {
-    if (!data.length) return; // Wait for data
+    if (!data.length) return; 
     
-    // Remove any existing SVG and tooltip to prevent duplicates
+
     d3.select(".display-graph-container").select("svg").remove();
     d3.select("#tooltip").remove();
 
-    // Create tooltip with enhanced styling
     const tooltip = d3.select("body")
         .append("div")
         .attr("id", "tooltip")
