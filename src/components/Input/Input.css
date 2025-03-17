@@ -1,0 +1,156 @@
+.input {
+    max-width: 700px;
+    padding: 16px;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f5f7fa;
+    box-shadow: 0 4px 12px rgba(42, 95, 255, 0.1);
+    border: 1px solid rgba(92, 51, 201, 0.1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+.input:hover {
+    box-shadow: 0 6px 16px rgba(42, 95, 255, 0.15);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.dark {
+    background-color: #1E1E1E;
+    color: #EAEAEA;
+    border: 1px solid rgba(92, 51, 201, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark:hover {
+    box-shadow: 0 6px 18px rgba(92, 51, 201, 0.2);
+}
+
+.dark-bg {
+    background-color: #121212;
+}
+
+.input-header {
+    min-width: 100px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+    position: relative;
+    padding-left: 12px;
+}
+
+.dark .input-header {
+    color: #e0e0e0;
+}
+
+/* Add a subtle accent similar to navbar */
+.input-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 3px;
+    background: linear-gradient(to bottom, #2A5FFF, #5C33C9);
+    border-radius: 3px;
+}
+
+.input-field {
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    height: 32px;
+    margin: 4px;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 14px;
+}
+
+.input-field:focus {
+    border-color: #2A5FFF;
+    box-shadow: 0 0 0 2px rgba(42, 95, 255, 0.15);
+    outline: none;
+}
+
+.dark-input {
+    background-color: #2a2a2a;
+    color: #EAEAEA;
+    border: 1px solid #444;
+    border-radius: 6px;
+    height: 32px;
+    margin: 4px;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 14px;
+}
+
+.dark-input:focus {
+    border-color: #5C33C9;
+    box-shadow: 0 0 0 2px rgba(92, 51, 201, 0.25);
+    outline: none;
+}
+
+/* Style for select dropdowns */
+select.input-field, select.dark-input {
+    cursor: pointer;
+    appearance: none;
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+}
+
+select.dark-input {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23eaeaea' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* Buttons styling to match the theme */
+button.input-field, button.dark-input {
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(180deg, #2A5FFF 0%, #5C33C9 100%);
+    color: white;
+    border: none;
+    padding: 0 16px;
+    height: 36px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button.input-field:hover, button.dark-input:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(42, 95, 255, 0.3);
+}
+
+button.input-field:active, button.dark-input:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(42, 95, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .input {
+        padding: 12px;
+        margin: 10px;
+    }
+    
+    .input-field, .dark-input {
+        font-size: 13px;
+        height: 30px;
+    }
+}
